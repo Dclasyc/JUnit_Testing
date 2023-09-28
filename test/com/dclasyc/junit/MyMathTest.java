@@ -6,11 +6,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyMathTest {
 
-    @Test
-    void calculateSum() {
-
     // Arrange - Setup Test Object
-        MyMath myMath = new MyMath();
+    MyMath myMath = new MyMath();
+
+    @Test
+    void calculateSum_ThreeLengthArray() {
 
     //Act - Do the actual method
         int [] numbers = {1, 2, 3};
@@ -21,4 +21,12 @@ class MyMathTest {
         assertEquals(expectedResult, actualResult);
 
     }
+
+    @Test
+    void calculateSum_ZeroLengthArray(){
+
+        assertEquals(0, myMath.calculateSum(new int[] {}));
+
+    }
+
 }
